@@ -52,6 +52,7 @@ int main()
 	delete[] locationList;
 	delete[] personList;
 
+	while (true);
 	return 0;
 }
 
@@ -94,9 +95,7 @@ void SetupPeople(Person* personList, int personCount, Location* locationList, in
 		int index;
 		cin >> index;
 
-		personList[p].home = new Location;
-		personList[p].home->city = locationList[index].city;
-		personList[p].home->state = locationList[index].state;
-		personList[p].home->zip = locationList[index].zip;
+		
+		personList[p].home = &locationList[index];
 	}
 }
